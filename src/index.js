@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log(pokemonArray)
   getAllPokemon()
-  // pokeSearchBar.addEventListener('input', filterPokemon)
 })
 
 const apiURL = 'http://localhost:3000/pokemon'
 const pokeContainer = document.querySelector('#pokemon-container')
 const pokeSearchBar = document.querySelector('#pokemon-search-form')
+pokeSearchBar.addEventListener('input', filterPokemon)
 let pokemonArray
 
 //YOUR CODE HERE
@@ -31,6 +31,7 @@ function showSinglePokemon(pokemon) {
   pokeOuterDiv.setAttribute('class', 'pokemon-container')
   let pokeInnerDiv = document.createElement('div')
   pokeInnerDiv.setAttribute('class', 'pokemon-frame')
+  pokeInnerDiv.setAttribute('style', 'width:230px;margin:10px;background:#fecd2f;color:#2d72fc')
   pokeInnerDiv.innerHTML = `
   <h1 class="center-text">${pokemon.name}</h1>
   `
@@ -53,5 +54,15 @@ function showSinglePokemon(pokemon) {
   pokeOuterDiv.appendChild(pokeInnerDiv)
 }
 
-// code = filtered pokemon
-// showAllPokemon(filteredPokemon)
+function filterPokemon (event) {
+  // debugger
+  let pokemonCards = document.querySelectorAll('.pokemon-container')
+  pokemonCards.forEach(card => {
+    const name = card.querySelector('h1').innerText
+    if (name.includes(event.target.value)) {
+      card.style.display = ''
+    } else {
+      card.style.display = 'none'
+    }
+  })
+}

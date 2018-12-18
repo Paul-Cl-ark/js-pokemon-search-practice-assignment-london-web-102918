@@ -213,8 +213,8 @@
       ],
       "types": ["fire", "flying"],
       "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"
+        "front": "https://www.pokepedia.fr/images/c/cf/Sprite_6_x_006.png",
+        "back": "https://www.pokepedia.fr/images/6/65/Sprite_6_dos_006.png"
       }
     },
     {
@@ -263,8 +263,8 @@
       ],
       "types": ["water"],
       "sprites": {
-        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-        "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"
+        "front": "https://www.pokepedia.fr/images/b/bc/Sprite_6_x_007.png",
+        "back": "https://www.pokepedia.fr/images/6/6a/Sprite_6_dos_007.png"
       }
     },
     {
